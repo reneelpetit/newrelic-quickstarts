@@ -1,39 +1,173 @@
 {
-    "name": "Hackathon 2022 Group 8",
-    "description": null,
-    "pages": [
-      {
-        "name": "Hackathon 2022 Group 8",
-        "description": null,
-        "widgets": [
-          {
-            "title": "What Cities Are My Users In?",
-            "layout": {
-              "column": 1,
-              "row": 1,
-              "width": 4,
-              "height": 3
+  "name": "Hackathon 2022 Group 8",
+  "description": null,
+  "permissions": "PUBLIC_READ_WRITE",
+  "pages": [
+    {
+      "name": "Hackathon 2022 Group 8",
+      "description": null,
+      "widgets": [
+        {
+          "title": "",
+          "layout": {
+            "column": 1,
+            "row": 1,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.markdown"
+          },
+          "rawConfiguration": {
+            "text": "[![O11Y the owl](https://github.com/reneelpetit/newrelic-quickstarts/blob/main/quickstarts/hackathongroup8/O11Y%202.png)\n# Hello developers! Welcome to Nutz & Boltz O11Y. Track how your page is performing and look for security tip offs.\n## What does each widget do?\n  - Pageload Time: Pageloads by time taken\n  - User Operating System: Number of users for a particular OS\n  - Mobile Device Crashes: Lists session ID and city of mobile crashes\n  - Cloud Provider: Lists session ID and Cloud Provider & Instance (if there are any)\n### Visit our github repository: https://github.com/reneelpetit/newrelic-quickstarts"
+          }
+        },
+        {
+          "title": "Page Load Time",
+          "layout": {
+            "column": 5,
+            "row": 1,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.histogram"
+          },
+          "rawConfiguration": {
+            "legend": {
+              "enabled": true
             },
-            "linkedEntityGuids": null,
-            "visualization": {
-              "id": "viz.bar"
-            },
-            "rawConfiguration": {
-              "facet": {
-                "showOtherSeries": false
-              },
-              "nrqlQueries": [
-                {
-                  "accountId": 0,
-                  "query": "SELECT count(*) FROM PageView since 1 day ago FACET  city"
-                }
-              ],
-              "platformOptions": {
-                "ignoreTimeRange": false
+            "nrqlQueries": [
+              {
+                "accountId": 1606862,
+                "query": "SELECT histogram(duration) FROM PageView SINCE 1 hour ago"
               }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            },
+            "yAxisLeft": {
+              "zero": true
             }
           }
-        ]
-      }
-    ]
-  }
+        },
+        {
+          "title": "User Operating System",
+          "layout": {
+            "column": 9,
+            "row": 1,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.bar"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 1606862,
+                "query": "SELECT Count(*) FROM AjaxRequest SINCE 1 hour ago FACET userAgentOS"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            }
+          }
+        },
+        {
+          "title": "What Cities Are My Users In?",
+          "layout": {
+            "column": 1,
+            "row": 4,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.bar"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 1606862,
+                "query": "SELECT count(*) FROM PageView since 1 hour ago FACET  city"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            }
+          }
+        },
+        {
+          "title": "Mobile Device Crashes Location & Session ID",
+          "layout": {
+            "column": 5,
+            "row": 4,
+            "width": 8,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.table"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 1606862,
+                "query": "SELECT sessionCrashed, sessionId, city FROM MobileCrash SINCE 1 hour ago"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            }
+          }
+        },
+        {
+          "title": "Cloud Provider Location & Session ID",
+          "layout": {
+            "column": 1,
+            "row": 7,
+            "width": 12,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.table"
+          },
+          "rawConfiguration": {
+            "dataFormatters": [],
+            "facet": {
+              "showOtherSeries": false
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 1606862,
+                "query": "SELECT cloudProvider, cloudInstanceID, session, city FROM PageAction SINCE 1 hour ago"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Testing Page",
+      "description": null,
+      "widgets": []
+    }
+  ]
+}
