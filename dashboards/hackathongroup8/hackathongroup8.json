@@ -1,0 +1,39 @@
+{
+    "name": "Hackathon 2022 Group 8",
+    "description": null,
+    "pages": [
+      {
+        "name": "Hackathon 2022 Group 8",
+        "description": null,
+        "widgets": [
+          {
+            "title": "What Cities Are My Users In?",
+            "layout": {
+              "column": 1,
+              "row": 1,
+              "width": 4,
+              "height": 3
+            },
+            "linkedEntityGuids": null,
+            "visualization": {
+              "id": "viz.bar"
+            },
+            "rawConfiguration": {
+              "facet": {
+                "showOtherSeries": false
+              },
+              "nrqlQueries": [
+                {
+                  "accountId": 0,
+                  "query": "SELECT count(*) FROM PageView since 1 day ago FACET  city"
+                }
+              ],
+              "platformOptions": {
+                "ignoreTimeRange": false
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
