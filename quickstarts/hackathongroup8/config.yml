@@ -35,12 +35,8 @@ keywords:
 # Allows us to construct reusable "install plans" and just use their ID in the quickstart config
 installPlans:
   - example-install
-alerts:
-  - condition-a
-  - condition-b
 dashboards:
-  - dashboard-1
-  - dashboard-2
+  - Hackathon 2022 Group 8
 # Documentation references
 documentation:
   - name: Installation docs
@@ -48,5 +44,5 @@ documentation:
     description: Description about this doc reference
 
 # Content / Design
-icon: O11Y 2.png
-website: https://www.newrelic.com
+icon: logo.png
+website: https://github.com/reneelpetit/newrelic-quickstarts
