@@ -6,11 +6,15 @@ title: Hackathon 2022 Group 8
 
 # Long-form description of the quickstart (required)
 description: |
-  Nutz & Boltz 
+  Nutz & Boltz is a dashboard to provide developers a view into the efficiency of their service while also providing a glimpse into possible security issues. This dashboard gives you: 
+    Pageload Time: Pageloads by time taken
+    User Operating System: Number of users for a particular OS
+    Mobile Device Crashes: Lists session ID and city of mobile crashes
+    Cloud Provider: Lists session ID and Cloud Provider & Instance (if there are any)
 
 # Displayed in search results and recommendations. Summarizes a quickstarts functionality.
 summary: |
-  A short form description for this quickstart
+  This quickstart provides a dashboard for quickly viewing efficiency through pageload times, user operating system types, mobile device crashes and cloud provider list.
 
 # Support level: New Relic | Verified | Community (required)
 level: Community
@@ -20,12 +24,12 @@ authors:
   - Evan Kim
   - Evan Burchett
   - Renee Petit
+
 # Keywords for filtering / searching criteria in the UI
 keywords:
-  - list
-  - of
-  - searchable
-  - keywords
+  - optimization
+  - pageload
+  - security
 
 # Reference to install plans located under /install directory
 # Allows us to construct reusable "install plans" and just use their ID in the quickstart config
@@ -44,5 +48,5 @@ documentation:
     description: Description about this doc reference
 
 # Content / Design
-icon: logo.svg
+icon: O11Y 2.png
 website: https://www.newrelic.com
