@@ -20,7 +20,7 @@
             "id": "viz.markdown"
           },
           "rawConfiguration": {
-            "text": "[![O11Y the owl](https://github.com/reneelpetit/newrelic-quickstarts/blob/main/quickstarts/hackathongroup8/O11Y%202.png)\n# Hello developers! Welcome to Nutz & Boltz O11Y. Track how your page is performing and look for security tip offs.\n## What does each widget do?\n  - Pageload Time: Pageloads by time taken\n  - User Operating System: Number of users for a particular OS\n  - Mobile Device Crashes: Lists session ID and city of mobile crashes\n  - Cloud Provider: Lists session ID and Cloud Provider & Instance (if there are any)\n### Visit our github repository: https://github.com/reneelpetit/newrelic-quickstarts"
+            "text": "[![O11Y the owl](https://github.com/reneelpetit/newrelic-quickstarts/blob/main/quickstarts/hackathongroup8/O11Y%202.png)\n# Hello developers! Welcome to Nutz & Boltz O11Y. Track how your page is performing and look for security tip offs.\n## What does each widget do?\n  - Pageload Time: Pageloads by time taken\n  - User Operating System: Number of users for a particular OS\n  - In which cities are users located?: Lists the city and how many users in that location\n  - Mobile Device Crashes: Lists session ID and city of mobile crashes\n  - Cloud Provider: Lists session ID and Cloud Provider & Instance (if there are any)\n### Visit our github repository: https://github.com/reneelpetit/newrelic-quickstarts"
           }
         },
         {
