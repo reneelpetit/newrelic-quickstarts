@@ -1,4 +1,5 @@
 [![Community Project header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Community_Project.png)](https://opensource.newrelic.com/oss-category/#community-project)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Freneelpetit%2Fnewrelic-quickstarts.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Freneelpetit%2Fnewrelic-quickstarts?ref=badge_shield)
 
 **Announcement**: (07/28/2022) We recently made updates to the directory structure. Dashboards and alerts are now stored in their own directories, `dashboards/` and `alert-policies` respectively. For more information on the new structure, see our [contributing guide](./CONTRIBUTING.md)
 
@@ -76,3 +77,6 @@ If you believe you have found a security vulnerability in this project or any of
 ## License
 
 New Relic One quickstarts is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Freneelpetit%2Fnewrelic-quickstarts.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Freneelpetit%2Fnewrelic-quickstarts?ref=badge_large)
